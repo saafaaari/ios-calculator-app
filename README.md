@@ -1,7 +1,6 @@
 # 목차
 
 - [프로젝트 소개](#프로젝트-소개)
-- [프로젝트 구조](#프로젝트-구조)
 - [키워드](#키워드)
 - [학습 내용](#학습-내용)
 
@@ -10,7 +9,25 @@
 
 ### 프로젝트 화면
 
-## 프로젝트 구조(UML)
+<img src="https://i.imgur.com/tUF6hGv.gif" width="300">
+
+### 구현 현황
+- 각 버튼에 해당하는 이벤트
+- 초기 0에선 연사자를 입력하면 연산자만 변경될 뿐 리스트에 올라가지 않음
+- 소수점 이전 기준으로 3자 리마다 "," 찍어줌
+- 입력한 수가 "+3+2"이면 "0+3+2"로 연산
+- 초기 0에선 부호 변경 버튼을 눌러도 이벤트 발생하지 않음
+- 연산 버튼 "=" 한 번만 수행 연산을 끝내고는 "=" 버튼을 눌러도 다시 연산하지 않음
+- 4가지 에러 핸들링
+    - NaN: 0으로 나눴을 때
+    - 잘못된 입력: 이상한 연산식을 입력했을 때
+    - 잘못된 피연산자 입력: 피면 사자를 잘못 입력했을 때
+    - 잘못된 연산자 입력: 연산자를 잘못 입력했을 때
+- 쓸모없는 0 생략
+- 연산을 끝내고 연산자를 누르면 이어서, 수를 누르면 초기화되어 새로운 연산 시작
+
+이번 프로젝트는 Side Effect를 최소화하기 위해서 함수형 프로그래밍 페러다임을 일적 채택했다. 
+
 
 ## 개발환경 및 라이브러리
 
@@ -18,7 +35,7 @@
 [![xcode](https://img.shields.io/badge/Xcode-13.0-blue)]()
 
 ## 키워드
-`TDD` `UnitTest` `Protocol` `Generic` `LLDB` `ErrorHandling`
+`TDD` `UnitTest` `Protocol` `Generic` `LLDB` `ErrorHandling` `Queue` `Linked List` 
 
 ## 학습 내용
 
@@ -87,7 +104,7 @@ ScrollView를 활용하면서 ScrollView는 Bounds를 사용하여 내부 컨텐
 #### View Update Cycle
 > 요청 받은 뷰 변경사항을 특정 시점에서 한번에 처리하는 방법
 
-이번 프로젝트에서 스크롤 뷰를 사용하며, View가 메소드 등으로 변화가 생기면, 메소드가 호출된 시점에 View가 수정되는 것이 아닌 [View Update Cycle](https://github.com/saafaaari/Today-I-Learned/blob/main/2022.03/2022.03.25%20View%20%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8.md)라는 주기를 가지며, view가 수정된다는 것을 알 수 있었다.
+이번 프로젝트에서 스크롤 뷰를 사용하며, View가 메소드 등으로 변화가 생기면, 메소드가 호출된 시점에 View가 수정되는 것이 아닌 [View Update Cycle](https://github.com/saafaaari/Today-I-Learned/blob/main/2022.03/2022.03.25%20View%20%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8.md)라는 주기를 가지며, view가 수정된다는 것을 알 수 있었다. 추가적으로 `layoutIfNeeded`, `setNeedsLayout`, `setNeedsDisplay`의 차이에 대해서 배울 수 있었다.
 
 
 
