@@ -8,6 +8,8 @@
 
 ## 프로젝트 소개
 
+### 프로젝트 화면
+
 ## 프로젝트 구조(UML)
 
 ## 개발환경 및 라이브러리
@@ -80,7 +82,7 @@
 객체지향 설계 5가지 원칙 [SOLID](https://github.com/saafaaari/Today-I-Learned/blob/main/2022.03/2022.03.18%20%EC%86%94%EB%A6%AC%EB%93%9C.md)에서 좋은 객체지향 설계에선 철저히 객체간 분리를 이야기하고 있다. 이를 Swift에선 Protocol를 이용하여 결합도를 낮춰줄 수 있다. [의존성 분리](https://github.com/saafaaari/Today-I-Learned/blob/main/2022.03/2022.03.17%20%EC%9C%A0%EB%8B%88%ED%85%8C%EC%8A%A4%ED%8A%B8%2C%20%EC%9D%98%EC%A1%B4%EC%84%B1%20%EC%A3%BC%EC%9E%85%EA%B3%BC%20%EB%B6%84%EB%A6%AC.md)하여 결합도를 낮춰줌으로써 Unitest에서도 특정 객체만 테스트를 진행할 수 있다.
 
 #### Frame와 Bounds
-
+ScrollView를 활용하면서 ScrollView는 Bounds를 사용하여 내부 컨텐츠를 보여준다는 것을 공부할 수 있었다. 때문에 이번 프로젝트를 통해 [Frame과 Bounds](https://github.com/saafaaari/Today-I-Learned/blob/main/2022.04/2022.04.01%20Frame%EC%99%80%20Bounds.md)의 차이와 어떤 상황에서 활용할 수 있을지 배울 수 있었다.
 
 #### View Update Cycle
 > 요청 받은 뷰 변경사항을 특정 시점에서 한번에 처리하는 방법
